@@ -13,8 +13,15 @@ import com.spring.model.Player;
 @Repository
 public class PlayerDAOImpl implements PlayerDAO {
 	
-	@Autowired
+	
 	private SessionFactory sessionFactory;
+	
+	@Autowired
+	public PlayerDAOImpl(SessionFactory sessionFactory) {
+		this.sessionFactory = sessionFactory;
+	}
+
+
 
 	@Override
 	public List<Player> getPlayers() {
