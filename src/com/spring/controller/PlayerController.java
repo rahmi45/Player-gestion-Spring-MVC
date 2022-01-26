@@ -11,8 +11,10 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import com.spring.model.Player;
 import com.spring.service.PlayerService;
 
+//http://localhost:8088/Player/
 @Controller
 @RequestMapping("/fifa")
+//http://localhost:8088/Player/fifa/
 public class PlayerController {
 	
 	private PlayerService playerService;
@@ -28,5 +30,10 @@ public class PlayerController {
 		model.addAttribute("players", players);
 		return "fifa-players";
 	}
-
+	//http://localhost:8088/Player/fifa/add
+	@GetMapping("/add")
+	public String savePage(Model model) {
+		model.addAttribute("player", new Player());
+		return "addPlayer";
+	}
 }

@@ -29,6 +29,7 @@ public class PlayerServiceImpl implements PlayerService{
 
 
 	@Override
+	@Transactional
 	public void savePlayer(Player player) {
 		playerDao.addPlayer(player);
 		
