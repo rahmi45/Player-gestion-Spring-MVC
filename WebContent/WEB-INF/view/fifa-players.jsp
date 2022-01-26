@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
+ <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %> 
 <!DOCTYPE html>
 <html>
 <head>
@@ -22,17 +23,19 @@
     </tr>
   </thead>
   <tbody>
-    <tr>
-	  <td>@id</td>
-      <td>@name</td>
-      <td>@number</td>
-      <td>@address</td>
-      <td>@phone</td>
-      <td>
-      	<button type="button" class="btn btn-primary">Edit</button>
-      	<button type="button" class="btn btn-danger">Delete</button>
-      </td>
-    </tr>
+  	<c:forEach var="player" items = "${players}">
+      <tr>
+	    <td>${player.id}</td>
+	    <td>${player.name}</td>
+	    <td>${player.number}</td>
+	    <td>${player.address}</td>
+	    <td>${player.phone}</td>
+      	<td>
+	      	<button type="button" class="btn btn-primary">Edit</button>
+	      	<button type="button" class="btn btn-danger">Delete</button>
+        </td>
+      </tr>
+    </c:forEach>
   </tbody>
 </table>
 </body>
