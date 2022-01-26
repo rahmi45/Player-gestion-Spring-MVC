@@ -35,4 +35,10 @@ public class PlayerServiceImpl implements PlayerService{
 		
 	}
 
+	@Override
+	public Player showPlayer(int id) {
+		// TODO Auto-generated method stub
+		return playerDao.getPlayer(id);
+	}
+
 }

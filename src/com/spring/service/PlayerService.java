@@ -9,5 +9,7 @@ public interface PlayerService {
 	public List<Player> allPlayer();
 	
 	public void savePlayer(Player player);
+	
+	public Player showPlayer(int id);
 		
 }
