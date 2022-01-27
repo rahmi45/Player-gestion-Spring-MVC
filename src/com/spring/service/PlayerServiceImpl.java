@@ -36,6 +36,7 @@ public class PlayerServiceImpl implements PlayerService{
 	}
 
 	@Override
+	@Transactional
 	public Player showPlayer(int id) {
 		// TODO Auto-generated method stub
 		return playerDao.getPlayer(id);
