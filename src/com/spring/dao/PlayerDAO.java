@@ -11,5 +11,8 @@ public interface PlayerDAO {
 	public void addPlayer(Player player);
 	
 	public Player getPlayer(int id);
+	
+	public void removePlayer(int id);
+	
 
 }

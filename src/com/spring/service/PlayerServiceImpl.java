@@ -38,8 +38,15 @@ public class PlayerServiceImpl implements PlayerService{
 	@Override
 	@Transactional
 	public Player showPlayer(int id) {
-		// TODO Auto-generated method stub
 		return playerDao.getPlayer(id);
+	}
+
+
+	@Override
+	@Transactional
+	public void deletePlayer(int id) {
+		playerDao.removePlayer(id);
+		
 	}
 
 }
