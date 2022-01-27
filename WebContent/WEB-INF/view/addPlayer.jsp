@@ -11,6 +11,7 @@
 </head>
 <body>
 <fo:form action="savePlayer"  modelAttribute="player"  class="row g-3">
+    <fo:hidden path="id"/>
   <div class="col-md-6">
     <label for="inputName" class="form-label">Name</label>
     <fo:input path="name" class="form-control" placeholder="Name"/>
@@ -28,7 +29,7 @@
     <fo:input path="phone" class="form-control" placeholder="Phone number"/>
   </div>
   <div class="col-12">
-    <button type="submit" class="btn btn-primary">Add !</button>
+    <button type="submit" class="btn btn-primary">Done !</button>
   </div>
 </fo:form>
 <%-- <h1>${pageContext.request.contextPath}</h1> --%>
